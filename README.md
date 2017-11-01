@@ -35,6 +35,18 @@ rho = 3.e-7
 Pgas= eos.pg_from_rho(temp, rho)
 Pe  = eos.pe_from_rho(temp, rho)
 ```
+Or if we only know the electron pressure:
+```python
+Pe = 7.0
+Pgas= eos.pg_from_pe(temp, Pe)
+rho  = eos.rho_from_pe(temp, Pe)
+```
+
+Remember that Pgas is the total gas pressure and it includes the electron pressure. To compute the particle density and the electron pressure, we can use the ideal gas equation: P = n B T:
+```python
+Na = (Pgas - Pe) / (eos.BK * temp)
+Ne = Pe          / (eos.BK * temp)
+```
 
 Finally, background opacities can be obtained for and array of wavelengths
 in Angstroms:
