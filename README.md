@@ -13,6 +13,9 @@ compute electron densities / pressure in LTE.
 
 All units in CGS.
 
+The same implementation is found in the SIR code (Fortran) and
+in NICOLE (Fortran).
+
 Dependencies:
 * It requires a pf_Kurucz.input containing the partition function data.
 * Numpy
