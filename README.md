@@ -18,6 +18,7 @@ Dependencies:
 * Numpy
 
 Usage:
+```python
 import witt
 eos = witt.witt()
 
@@ -26,16 +27,18 @@ Pgas = 10000.
 
 Pe = eos.pe_from_pg(temp,Pgas)
 rho= eos.rho_from_pg(temp, Pgas)
-
+```
 But if we know rho instead of pgas:
+```python
 rho = 3.e-7
 
 Pgas= eos.pg_from_rho(temp, rho)
 Pe  = eos.pe_from_rho(temp, rho)
-
+```
 
 Finally, background opacities can be obtained for and array of wavelengths
 in Angstroms:
-
+```python
 wav = np.float64([5000., 6000.])
 alpha = eos.contOpacity(temp, Pgas, Pe, wav)
+```
