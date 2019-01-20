@@ -51,7 +51,7 @@ Na = (Pgas - Pe) / (eos.BK * temp)
 Ne = Pe          / (eos.BK * temp)
 ```
 
-Finally, background opacities can be obtained for and array of wavelengths
+Finally, background opacities can be obtained for an array of wavelengths
 in Angstroms:
 ```python
 wav = np.float64([5000., 6000.])
